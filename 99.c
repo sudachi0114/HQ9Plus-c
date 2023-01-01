@@ -4,22 +4,41 @@
 
 #include <stdio.h>
 
+void pass_beer(void) {
+    printf("Take one down and pass it around, ");
+}
+
+void remaining_beer(int n) {
+    printf("%d bottle of beer on the wall.\n", n);
+}
+
+void beer_on_the_wall(int n) {
+    if (n == 0) {
+        printf("No more bottles of beer on the wall, no more bottles of beer.\n");
+    } else {
+        printf("%d bottles of beer on the wall, %d bottles of beer.\n", n, n);
+    }
+}
+
 int main(void) {
     for (int i=99; i>=0; i--) {
         switch (i)
         {
         case 0:
-            printf("No more bottles of beer on the wall, no more bottles of beer.\n");
-            printf("Go to the store and buy some more, 99 bottles of beer on the wall\n");
+            beer_on_the_wall(i);
+            printf("Go to the store and buy some more,");
+            remaining_beer(99);
             break;
         case 1:
-            printf("%d bottles of beer on the wall, %d bottles of beer.\n", i, i);
-            printf("Take one down and pass it around, no more bottles of beer on the wall.\n", i-1);
+            beer_on_the_wall(i);
+            pass_beer();
+            printf("no more bottles of beer on the wall.\n");
             printf("\n");
             break;
         default:
-            printf("%d bottles of beer on the wall, %d bottles of beer.\n", i, i);
-            printf("Take one down and pass it around, %d bottles of beer on the wall.\n", i-1);
+            beer_on_the_wall(i);
+            pass_beer();
+            remaining_beer(i-1);
             printf("\n");
             break;
         }
