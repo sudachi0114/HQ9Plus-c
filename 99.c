@@ -15,6 +15,7 @@ void remaining_beer(int n) {
 void beer_on_the_wall(int n) {
     if (n == 0) {
         printf("No more bottles of beer on the wall, no more bottles of beer.\n");
+        printf("Go to the store and buy some more, ");
     } else {
         printf("%d bottles of beer on the wall, %d bottles of beer.\n", n, n);
     }
@@ -26,7 +27,6 @@ int main(void) {
         {
         case 0:
             beer_on_the_wall(i);
-            printf("Go to the store and buy some more,");
             remaining_beer(99);
             break;
         case 1:
