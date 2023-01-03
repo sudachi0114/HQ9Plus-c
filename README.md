@@ -1,5 +1,30 @@
 # HQ9+.c
 
+## 実行方法
+
+**コンパイル・実行**
+
+```shell
+$ gcc main.c -o main
+$ ./main
+```
+
+**ソースコードを読み込む**
+
+* ファイルで読み込む場合
+
+```shell
+$ ./main hq9plus.hq9
+```
+
+* 標準入力から読み込む場合
+
+```shell
+$ echo "HQQ" | ./main
+```
+
+## 参考
+
 * [switch文](https://www.javadrive.jp/cstart/if/index6.html)
 
 * [フォーマット指定子一覧](https://www.k-cube.co.jp/wakaba/server/format.html)
