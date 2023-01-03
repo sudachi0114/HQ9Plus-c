@@ -21,7 +21,7 @@ void beer_on_the_wall(int n) {
     }
 }
 
-int main(void) {
+int print_99_bottle_of_beer(void) {
     for (int i=99; i>=0; i--) {
         switch (i)
         {
