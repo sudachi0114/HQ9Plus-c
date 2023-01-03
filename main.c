@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
             hello();
             break;
         case 'Q':
-            print_source();
+            printf("%s\n", s);
             break;
         case '9':
             print_99_bottle_of_beer();
