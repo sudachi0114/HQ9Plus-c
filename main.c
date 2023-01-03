@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 #include "hello.c"
 #include "source.c"
@@ -9,6 +10,8 @@ int main(int argc, char *argv[]) {
     char s[] = "";
     FILE * fp = NULL;
 
+    int n = 0;
+
     if (argv[1] != NULL) {
         /* ファイルで渡された場合
          * ファイルを開いてソースコードを読み込む
@@ -18,24 +21,30 @@ int main(int argc, char *argv[]) {
         fscanf(fp, "%s", &s);
 
         fclose(fp);
-
-        printf("%s\n", s);
     } else {
         // 直にソースコードを渡された場合
         scanf("%s", s);
-        printf("%s\n", s);
     }
 
-    /*
-    hello();
+    int length = 0;
+    length = strlen(s);
 
-    print_source();
-
-    print_99_bottle_of_beer();
-
-    int n = 0;
-    increment(n);
-    */
+    for (int i=0; i<length; i++) {
+        switch (s[i]) {
+        case 'H':
+            hello();
+            break;
+        case 'Q':
+            print_source();
+            break;
+        case '9':
+            print_99_bottle_of_beer();
+        case '+':
+            increment(n);
+        default:
+            break;
+        }
+    }
 
     return 0;
 }
