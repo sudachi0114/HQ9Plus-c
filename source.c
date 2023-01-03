@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void) {
+int print_source(void) {
     FILE * fp = NULL;
     fp = fopen(__FILE__, "r");
 
